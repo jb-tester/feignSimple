@@ -22,4 +22,8 @@ public class ClientController {
     public String test1(){
         return test1.test1();
     }
+    @GetMapping("/testClient/root")
+    public String root(){
+        return test1.root();
+    }
 }

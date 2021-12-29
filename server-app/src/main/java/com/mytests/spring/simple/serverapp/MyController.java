@@ -15,6 +15,11 @@ import java.util.Random;
 @RestController
 public class MyController {
 
+    @GetMapping("/")
+    public String root( ) {
+        return "root";
+    }
+
     @GetMapping("/test1")
     public String test1( ) {
         return "test1"+new Random().nextInt();
