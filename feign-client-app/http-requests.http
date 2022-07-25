@@ -11,3 +11,10 @@ GET http://localhost:8082/testClient/test1
 
 ###client-controller without servlet.context-path - empty url
 GET http://localhost:8082/testClient/root
+
+###client-controller with servlet.context-path - notempty url
+GET http://localhost:8082/simple/client/testClient/test1
+
+
+###client-controller with servlet.context-path - empty url
+GET http://localhost:8082/simple/client/testClient/root
