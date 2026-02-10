@@ -15,9 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class ClientController {
 
 
-    @Autowired @Qualifier("simple")
-    private MyClient1 test1;
-    
+    private final MyClient1 test1;
+
+    public ClientController(@Qualifier("simple") MyClient1 test1) {
+        this.test1 = test1;
+    }
+
     @GetMapping("/testClient/test1")
     public String test1(){
         return test1.test1();
